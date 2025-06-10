@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ma Boutique Vitrine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    .banniere-livraison {
+  background-color: #00c853;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.banniere-livraison::before {
+  content: "🚚 Livraison gratuite sur tous les produits !   ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: slideBanner 8s infinite alternate ease-in-out;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+
+@keyframes slideBanner {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Section vidéo d'accueil */
+    header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    header .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 15px;
+    }
+
+    /* Section produits */
+    .produit-section {
+      padding: 50px 20px;
+      text-align: center;
+      background: #f9f9f9;
+    }
+
+    .produits {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .produit {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .produit img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .produit h3 {
+      margin: 15px 0 10px;
+    }
+
+    .produit p {
+      color: green;
+      font-weight: bold;
+    }
+
+    /* Pied de page */
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .social-icons {
+      margin: 15px 0;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 15px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #00ffcc;
+    }
+
+    .copyright {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banniere-livraison">
+  
+</div>
+
+  <header>
+    <video autoplay loop muted>
+      <source src="vi.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la vidéo HTML5.
+    </video>
+    <div class="content">
+      <h1>Bienvenue à Ma Boutique</h1>
+      <p>Des lunettes de tendance à petit prix</p>
+    </div>
+  </header>
+
+  <!-- Section Produits -->
+  <section class="produit-section">
+    <h2>Nos produits</h2>
+    <div class="produits">
+      <div class="produit">
+        <img src="im1.jpg" alt="Produit 1">
+        <h3>lunette de tendance  </h3>
+        <p>4 000 FCFA</p>
+      </div>
+      <div class="produit">
+        <img src="lu2.jpg" alt="Produit 2">
+        <h3>lunette de soleil à la mode</h3>
+        <p>8 000 FCFA</p>
+      </div>
+    </div>
+  </section>
+    
+  
+  <footer>
+    <h3>Contact</h3>
+    <p>Téléphone : +221 76 833 72 82</p>
+    <div class="social-icons">
+      <a href="https://wa.me/221768337282" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://instagram.com/senboutik1" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://snapchat.com/add/dou_lofficiel12" target="_blank" title="Snapchat">
+        <i class="fab fa-snapchat"></i>
+      </a>
+    </div>
+    <div class="copyright">
+      © 2025 Ma Boutique – Tous droits réservés.
+    </div>
+  </footer>
+
+</body>
+</html>
